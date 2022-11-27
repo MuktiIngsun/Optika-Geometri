@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html lang="id" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pemantulan Cahaya pada Cermin Cekung - Optik Geometri</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../pengantar.html">Pengantar</a></li><li class="chapter-item expanded "><a href="../c1.html"><strong aria-hidden="true">1.</strong> Pemantulan Cahaya</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Cermin-Datar/cerminDatar.html"><strong aria-hidden="true">1.1.</strong> Pemantulan Cahaya pada Cermin Datar</a></li><li class="chapter-item expanded "><a href="../Cermin-Cekung/cerminCekung.html" class="active"><strong aria-hidden="true">1.2.</strong> Pemantulan Cahaya pada Cermin Cekung</a></li><li class="chapter-item expanded "><a href="../cerminLengkung.html"><strong aria-hidden="true">1.3.</strong> Atribut Cermin Lengkung</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Optik Geometri</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="pemantulan-cahaya-pada-cermin-cekung"><a class="header" href="#pemantulan-cahaya-pada-cermin-cekung">Pemantulan Cahaya pada Cermin Cekung</a></h1>
+<blockquote>
+<p>kita batasi pembahasan hanya pada cermin cekung dengan sudut buka kecil (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span></span></span></span></span></span></span></span>) dan juga pada sinar - sinar paraksial saja (sinar yang dekat dengan sumbu utama)</p>
+</blockquote>
+<h2 id="tiga-sinar-istimewa-pada-cermin-cekung"><a class="header" href="#tiga-sinar-istimewa-pada-cermin-cekung">Tiga Sinar Istimewa pada Cermin Cekung</a></h2>
+<p>Disebut sinar istimewa karena sinar-sinar ini mempunyai sifat pemantulan yang mudah dilukis. Ketiga sinar istimewa ini sangat penting untuk melukis pembentukan bayangan pada cermin cekung. Ketiga sinar istimewa ini adalah sebagai berikut.</p>
+<ol>
+<li>Sinar datang sejajar sumbu utama cermin dipantulkan melalui titik fokus F.</li>
+<li>Sinar datang melalui titik fokus F dipantulkan sejajar sumbu utama </li>
+<li>Sinar datang melalui titik pusat kelengkungan M dipantulkan kembali ke titik pusat kelengkungan tersebut</li>
+</ol>
+<p>untuk memberikan gambaran, silakan main - main lagi dengan simulasi dibawah ini.</p>
+<div style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;">
+    <iframe title="Simulasi Pemantulan Pada Cermin Datar" src="https://www.geogebra.org/material/iframe/id/4576/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/true/at/auto" style="border: 0px; position: absolute; top: 0;left: 0; bottom: 0; right: 0; width: 100%; height: 100%;"></iframe>
+</div>
+<blockquote>
+<p>coba kalian identifikasi ada berapa jenis bayangan yang terbentuk!</p>
+</blockquote>
+<h2 id="melukis-bayangan-pada-cermin-cekung"><a class="header" href="#melukis-bayangan-pada-cermin-cekung">Melukis Bayangan pada Cermin Cekung</a></h2>
+<p>Untuk melukis pembentukan bayangan pada cermin cekung, gunakan langkah-langkah berikut.</p>
+<ol>
+<li>Lukis dua sinar istimewa</li>
+<li>Sinar selalu datang dari bagian depan cermin dan dipantulkan kembali ke bagian depan. Perpanjangan sinar-sinar di belakang cermin dilukis sebagai garis putus-putus</li>
+<li>Perpotongan kedua sinar pantul yang dilukis pada langkah (1) merupakan letak bayangan. Jika perpotongan didapat dari perpanjangan sinar pantul, bayangan yang dihasilkan adalah maya dan dilukis dengan garis putus-putus.</li>
+</ol>
+<p>Pada gambar dibawah ini ditunjukkan hasil lukisan pembentukan bayangan untuk benda yang terletak di depan M dan antara O dan F. </p>
+<blockquote>
+<p>Coba lukiskan pembentukan bayangan untuk benda tepat di 2F dan antara F dan 2P.</p>
+</blockquote>
+<p><img src="2022-11-28%2001-01_page_2.jpg" alt="Pembentukan bayangan pada cermin cekung" /></p>
+<blockquote>
+<p>Jika kalian perhatikan, ketika benda di ruang 1 (antara O &amp; F) bayangannya terletak di ruang 4 diperbesar (di belakang cermin) dan ketika benda di ruang 3 (di depan M) bayangannya berada di ruang 2 diperkecil. Dengan kata lain, <strong>ruang benda + ruang bayangan = 5</strong> dan juga bayangan diperbesar jika ruang benda &lt; ruang bayangan, bayangan diperkecil jika ruang benda &gt; ruang bayangan.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Cermin-Datar/cerminDatar.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../cerminLengkung.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Cermin-Datar/cerminDatar.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../cerminLengkung.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../mermaid.min.js"></script>
+        <script type="text/javascript" src="../mermaid-init.js"></script>
+
+
+    </body>
+</html>
